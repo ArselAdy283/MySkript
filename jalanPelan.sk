@@ -1,0 +1,23 @@
+on first join:
+    set slot 0 of player's inventory to ghast tear named "&e&k!&r&7Jalan-Pelan&e&k!&r" with lore "&7item untuk mengaktifkan mode jalan pelan"
+
+on join:
+    if player does not have ghast tear with lore "&7item untuk mengaktifkan mode jalan pelan":
+        set slot 0 of player's inventory to ghast tear named "&e&k!&r&7Jalan-Pelan&e&k!&r" with lore "&7item untuk mengaktifkan mode jalan pelan"
+
+on drop:
+    if lore of event-item contains "&7item untuk mengaktifkan mode jalan pelan":
+        cancel event
+
+on inventory click:
+    if lore of event-item is "&7item untuk mengaktifkan mode jalan pelan":
+        cancel event
+
+on right click:
+    if lore of player's tool is "&7item untuk mengaktifkan mode jalan pelan":
+        if player has potion effect slowness:
+            remove slowness from player
+            send "&7Mode jalan pelan nonaktif!" to player
+        else:
+            execute console command "effect give %player% slowness 99999 1 true"
+            send "&7Mode jalan pelan aktif!" to player

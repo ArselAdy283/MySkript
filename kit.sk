@@ -1,0 +1,6 @@
+#semoga bisa
+
+command /kit:
+    trigger:
+        give player 1 diamond named "&6cihuyyy"
+        send "makasih bg arsel"

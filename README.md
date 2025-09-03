@@ -1,0 +1,2 @@
+# MySkript
+kumpulan skript buatanku
